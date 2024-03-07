@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/aspire-assignment/static/css/main.1cdeb5b0.css",
-    "main.js": "/aspire-assignment/static/js/main.10d97a0d.js",
+    "main.js": "/aspire-assignment/static/js/main.d6f27254.js",
     "static/js/453.df686226.chunk.js": "/aspire-assignment/static/js/453.df686226.chunk.js",
     "index.html": "/aspire-assignment/index.html",
     "static/media/down-arrow.svg": "/aspire-assignment/static/media/down-arrow.6120f65101a5c8726129.svg",
     "static/media/up-arrow.svg": "/aspire-assignment/static/media/up-arrow.158a1744d113c3be1bf9.svg",
     "main.1cdeb5b0.css.map": "/aspire-assignment/static/css/main.1cdeb5b0.css.map",
-    "main.10d97a0d.js.map": "/aspire-assignment/static/js/main.10d97a0d.js.map",
+    "main.d6f27254.js.map": "/aspire-assignment/static/js/main.d6f27254.js.map",
     "453.df686226.chunk.js.map": "/aspire-assignment/static/js/453.df686226.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1cdeb5b0.css",
-    "static/js/main.10d97a0d.js"
+    "static/js/main.d6f27254.js"
   ]
 }
