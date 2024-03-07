@@ -17,7 +17,7 @@ const App = () => {
 
       <div className='contents'>
           <Routes>
-            <Route path="/aspire-assignment" element = {<HomePage/>}/>
+            <Route path="/" element = {<Cards/>}/>
             <Route path="/cards" element = {<Cards/>}/>
             <Route path="/payments" element = {<Payments/>}/>
             <Route path="/credit" element = {<Credit/>}/>
