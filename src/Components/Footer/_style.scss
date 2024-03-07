@@ -1,0 +1,31 @@
+
+
+@media (max-width: 768px) {
+    .footer_mobile {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+        padding: 12px 30px 8px 30px;
+        // text-align: center;
+        height: 66px;
+    
+        .nav{
+            justify-content: space-between;
+        }
+    
+        .nav-link{
+            font-size: 9px;
+            color: #DDDDDD;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .footer_mobile {
+        display: none;
+
+    }
+}

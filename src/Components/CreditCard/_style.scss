@@ -1,0 +1,145 @@
+.show-card {
+    display: flex;
+    /* justify-content: end; */
+    /* margin-bottom: 12px; */
+    font-size: 12px;
+    // margin-left: 233px;
+    position: relative;
+    /* float: right; */
+    color: #01D167;
+    padding: 5px 10px 18px 5px;
+    /* right: -91px; */
+    z-index: 0;
+    top: -20px;
+    width: 154px;
+    top: 10px;
+    /* right: 2%; */
+    height: 40px;
+   
+    border-radius: 6px;
+    background-color: #FFFFFF !important;
+    font-weight: 700;
+    cursor: pointer;
+
+    img {
+        margin-right: 6px;
+    }
+}
+
+.credit_card {
+    width: 414px;
+    height: 249px;
+    border-radius: 12px;
+    
+    padding: 27px;
+    color: white;
+    position: relative;
+    z-index: 3;
+
+    &.frozen{
+        background-color: #7e7e7e;
+     
+    }
+
+    &.normal {
+        background-color: var(--secondary-color);
+    }
+
+    .company-logo {
+        display: flex;
+        justify-content: end;
+
+
+        img {
+            width: fit-content;
+        }
+    }
+
+    .holder-name {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 27px;
+    }
+
+    .card-number {
+        margin-top: 32px;
+
+        .card-info {
+            display: flex !important;
+            align-items: baseline;
+
+            .card-content {
+                margin-right: 27px;
+                font-size: 14px;
+                font-weight: 700;
+                display: flex;
+                letter-spacing: 3.46px;
+
+
+            }
+        }
+
+    }
+
+    .card-dates {
+        margin-top: 17px;
+        font-weight: 700;
+        letter-spacing: 1.56px;
+        align-items: center;
+
+        .card-exp {}
+
+        .card-cvv {
+            display: flex;
+            align-items: center;
+        }
+
+        .cvv-hidden {
+            font-size: 24px;
+            padding-left: 3px;
+
+        }
+    }
+
+    .visa-logo {
+        display: flex;
+        justify-content: end;
+
+
+        img {
+            width: fit-content;
+        }
+    }
+}
+
+.dot_container {
+    display: flex;
+
+    .hidden {
+        width: 9px;
+        height: 9px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        margin-right: 6px;
+
+
+    }
+}
+
+
+@media (max-width: 768px) {
+    .credit_card {
+        width: 100% !important;
+        height: 260px !important;
+    }
+
+    .show-card {
+        background-color: #ffffff;
+    }
+
+    .cvv-hidden {
+        font-size: 22px !important;
+        padding-left: 3px;
+
+    }
+}

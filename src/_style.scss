@@ -1,0 +1,38 @@
+:root {
+    --primary-color: #0C365A;
+    --secondary-color: #01D167;
+    --accent-color: #325BAF;
+    --border-color: #23CEFD;
+    --bg-accordion: #EDF3FF;
+    --bs-accordion-btn-icon-main: url('../public/down-arrow.svg') !important;
+    --bs-accordion-btn-active-main: url('../public/up-arrow.svg') !important;
+
+    // $accordion-button-icon: url('./down-arrow.svg') !important;
+    // $accordion-button-active-icon: url('./up-arrow.svg') !important;
+
+   
+}
+
+
+.pilot {
+    display: flex;
+
+    .contents {
+        padding: 60px 60px 0px 60px;
+        // background-color: #FFFFFF;
+        // width: 100%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .contents {
+       padding: 0px !important;
+       background-color: #0C365A;
+    }
+
+    .pilot{
+        display: block !important;
+    }
+}

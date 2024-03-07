@@ -1,0 +1,80 @@
+.transaction-wrapper {
+    width: 318px;
+    height: 76px;
+    margin-bottom: 32px;
+
+    .transaction_container {
+        // align-items: center;
+
+        .image-icon {
+            margin-right: 14px;
+        }
+    }
+
+
+
+    .tr {
+        padding-top: 3px;
+
+        .tr_name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #222222;
+        }
+
+        .tr_date {
+            font-size: 13px;
+            color: #AAAAAA;
+        }
+    }
+
+    .tr_amount {
+        padding-top: 3px;
+        font-size: 14px;
+        
+        font-weight: 700;
+    }
+
+    .credit{
+        color: #01D167;
+    }
+
+    .deduct {
+        color: #222222
+    }
+
+    .display-message {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        padding-left: 68px;
+        margin-top: 2px;
+
+        .message-text {
+            font-size: 12px;
+            font-weight: 600;
+            color: #325BAF;
+            margin-left: 8px;
+        }
+    }
+}
+
+.icon-wrapper-lg {
+    width: 48px;
+    height: 48px;
+    background-color: #009DFF1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.icon-wrapper-sm {
+    width: 24px;
+    height: 20px;
+    background-color: #325BAF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}

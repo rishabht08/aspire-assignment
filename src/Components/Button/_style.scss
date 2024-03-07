@@ -1,0 +1,30 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px;
+
+    border-radius: 4px;
+ 
+    text-decoration: none;
+    color: #ffffff;
+    background-color: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    width: 110px;
+    height: 35px;
+    font-size: 13px;
+    white-space: nowrap;
+ 
+    outline: none;
+    border: none;
+
+
+    .icon {
+        margin-right: 8px;
+    }
+}
+
+.button:active {
+    border-style: outset;
+    border: none;
+}

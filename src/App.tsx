@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Sidebar from './Components/Sidebar/Sidebar';
+import HomePage from './Views/Home';
+import Cards from './Views/Cards/Cards';
+import Payments from './Views/Payments';
+import Credit from './Views/Credit';
+import Settings from './Views/Settings';
+import "./_style.scss"
+import Footer from './Components/Footer/Footer';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='pilot'>
+      <Sidebar/>
+
+      <div className='contents'>
+          <Routes>
+            <Route path="/" element = {<HomePage/>}/>
+            <Route path="/cards" element = {<Cards/>}/>
+            <Route path="/payments" element = {<Payments/>}/>
+            <Route path="/credit" element = {<Credit/>}/>
+            <Route path="/settings" element = {<Settings/>}/>
+          </Routes>
+      </div>
+      <Footer/>
     </div>
   );
 }

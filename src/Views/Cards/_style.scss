@@ -1,0 +1,231 @@
+.cards_page {
+
+
+    .card_info {
+        // border: 1px #ccc solid;
+        // width: 906px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+
+        .balance {
+         
+
+            .balance_value {
+                display: flex;
+                align-items: center;
+                padding: 5px 0px;
+
+
+                .dollars_design {
+                    width: 40px;
+                    height: 24px;
+                    text-align: center;
+                    background-color: var(--secondary-color);
+                    border-radius: 4px;
+                    font-size: 13px;
+                    padding: 2px 13px 4px 13px;
+                    color: white;
+
+                }
+
+                .dollars_value {
+                    margin-left: 9px;
+                    font-weight: 700;
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .add_card {
+            padding-top: 12px;
+
+        }
+    }
+
+    .card_details {
+        // border: 1px #ccc solid;
+        // width: 906px;
+        height: 770px;
+
+        .card_section {
+            // border: 1px solid #FCFCFC;
+            // width: 100%;
+            // padding: 60px 32px;
+            // box-shadow: 2px 2px 2px #00000014, 0px 2px 2px 2px #00000014;
+            // display: flex;
+
+            .card_physical {
+                height: 100%;
+                flex: 1;
+            }
+
+            .card_transaction {
+                // height: 100%;
+
+                // width: 100%;
+                // padding-top: 30px;
+                // padding-left: 24px;
+
+                // margin-left: 22px;
+                // padding-right: 24px;
+                // flex: 1;
+
+                .all-transaction {
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #01D167;
+                    background-color: #EDFFF5;
+                    border: 1px solid #DDFFEC;
+                    font-size: 13px;
+                    font-weight: 600;
+                }
+
+            }
+
+            .action-item-wrapper {
+                background-color: var(--bg-accordion);
+                padding: 21px 27px 20px 27px;
+                border-radius: 16px;
+                font-size: 13px;
+                letter-spacing: 0px;
+                width: 414px;
+
+                .item-container {
+                    width: 360px;
+                    height: 75px;
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    .action-item {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                        max-width: 61px;
+
+                        .item-icon {
+                            margin-bottom: 7px;
+                        }
+                    }
+
+
+                }
+
+            }
+
+
+
+        }
+
+
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .card_section {
+        flex-direction: column;
+    }
+
+    .card_info {
+        padding: 0px 24px;
+    }
+
+    .card_transaction {
+        padding: 24px 24px !important;
+        margin: 0px !important;
+        background-color: #FFFFFF;
+
+    }
+
+    .action-item-wrapper {
+        width: 100% !important;
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+}
+
+@media(min-width: 768px) {
+
+    .mobile_logo {
+        display: none;
+    }
+
+    .card_section {
+        border: 1px solid #FCFCFC;
+        width: 100%;
+        padding: 60px 32px;
+        box-shadow: 2px 2px 2px #00000014, 0px 2px 2px 2px #00000014;
+        display: flex;
+    }
+
+    .card_transaction {
+        height: 100%;
+
+        width: 100%;
+        padding-top: 30px;
+        padding-left: 24px;
+
+        margin-left: 22px;
+        padding-right: 24px;
+        flex: 1;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .mobile_logo {
+        padding-top: 12px;
+        padding-right: 24px;
+        display: flex;
+        justify-content: end;
+        margin-bottom: 3px;
+    }
+
+    .balance {
+        color: #FFFFFF;
+        font-weight: 700;
+    }
+
+
+    .add_card {
+        color: #23CEFD;
+        font-weight: 700;
+        cursor: pointer;
+        .add_mobile {
+            margin-top: 18px;
+            img{
+                margin-right: 6px;
+            }
+        }
+        .button {
+            display: none;
+        }
+
+    }
+
+}
+
+@media(min-width: 768px) {
+
+    
+
+    .balance {
+        color: #222222;
+        
+    }
+
+    .add_card {
+        .add_mobile {
+            display: none;
+        }
+
+    }
+
+}
