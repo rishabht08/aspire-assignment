@@ -10,7 +10,7 @@
     // $accordion-button-icon: url('./down-arrow.svg') !important;
     // $accordion-button-active-icon: url('./up-arrow.svg') !important;
 
-   
+
 }
 
 
@@ -28,11 +28,55 @@
 
 @media (max-width: 768px) {
     .contents {
-       padding: 0px !important;
-       background-color: #0C365A;
+        padding: 0px !important;
+        background-color: #0C365A;
     }
 
-    .pilot{
+    .pilot {
         display: block !important;
     }
+}
+
+
+//Overriding for scroll
+
+@media (max-width: 768px) {
+    .action-item-wrapper {
+        position: absolute;
+        z-index: 5;
+        top: 547px;
+    }
+
+    .card_transaction {
+        position: absolute;
+        width: 100%;
+        z-index: 5;
+        top: 662px;
+    }
+
+    .carousel{
+        position: fixed;
+        top: 190px;
+    }
+
+    .child-wrapper{
+        position: fixed;
+    }
+
+    .balance{
+        position: fixed;
+    }
+
+    .add_card{
+        position: fixed;
+        right: 24px;
+    }
+
+    .mobile_logo{
+        margin-bottom: 27px !important;
+        img{
+            position:fixed;
+        }
+    }
+
 }
