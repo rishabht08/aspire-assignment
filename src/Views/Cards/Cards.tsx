@@ -109,16 +109,16 @@ const Cards = (): React.JSX.Element => {
                     <div className="card_section">
                         <div className="card_physical">
                             <div>
-                                <Carousel setActiveCard={(index: number) => setActiveIndex(index)} />
+                                <Carousel activeIndex={activeIndex} setActiveCard={(index: number) => setActiveIndex(index)} />
                             </div>
-                            <div className="action-item-wrapper">
+                            {cardsList.length && <div className="action-item-wrapper">
                                 <div className="item-container">
                                     <div className="action-item" onClick={handleFreezeCard}>
                                         <div className="item-icon">
                                             <img src="./freezeCard.svg" alt="" />
                                         </div>
                                         <div className="item-name">
-                                            {(cardsList.length && cardsList[activeIndex].frozen) ? 'Unfreeze Card' : 'Freeze Card'}
+                                            {(cardsList.length && cardsList[activeIndex] && cardsList[activeIndex].frozen) ? 'Unfreeze Card' : 'Freeze Card'}
                                         </div>
                                     </div>
 
@@ -150,7 +150,7 @@ const Cards = (): React.JSX.Element => {
                                         <div className="item-name"> Cancel Card </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>}
                         </div>
                         <div className="card_transaction">
                             <Accordion icon={"group11889.svg"} header={'Card details'} toggleKey="firstChild">
@@ -177,7 +177,7 @@ const Cards = (): React.JSX.Element => {
 
                     </div>
                 </Tab>
-                <Tab label="All Company Cards" > No Data Available </Tab>
+                <Tab label="All Company Cards" disabled = {true}> No Data Available </Tab>
 
             </TabContainer>
         </div>
@@ -258,6 +258,7 @@ const Cards = (): React.JSX.Element => {
 
                 <BsButton variant="danger" onClick={() => {
                     dispatch(removeCard(activeIndex));
+                    setActiveIndex(activeIndex-1)
                     setLgcShow(false)
                 }}>Remove</BsButton>
             </Modal.Footer>

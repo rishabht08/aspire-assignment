@@ -6,11 +6,12 @@ interface TabProps {
     onClick?: () => void;
     isActive?: boolean;
     children?: React.ReactNode;
+    disabled?:boolean
 }
 
-export const Tab: React.FC<TabProps> = ({ label, onClick, isActive, children }) => {
+export const Tab: React.FC<TabProps> = ({ label, onClick, isActive, children , disabled }) => {
     return (
-        <div className={`tab ${isActive ? 'active' : ''}`} onClick={onClick}>
+        <div className={`tab ${isActive ? 'active' : ''}`} style = { disabled ? { pointerEvents: 'none'} : {}} onClick={onClick}>
             <div>{label} </div>
             {isActive && <div className="indicator" />}
         </div>

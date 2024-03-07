@@ -6,8 +6,9 @@ import { Card } from "../../Utils/types";
 import { useSelector } from "react-redux";
 import { getCards } from "../../store/cards/selectors";
 
-const Carousel = ({setActiveCard} : {
-    setActiveCard ?: (index:number) => void
+const Carousel = ({ activeIndex, setActiveCard }: {
+    activeIndex: number;
+    setActiveCard?: (index: number) => void
 }): React.JSX.Element => {
 
     const carouselRef = useRef<any>(null);
@@ -25,15 +26,16 @@ const Carousel = ({setActiveCard} : {
 
                 indicatorsRef.current.style.width = `${carouselRect.width}px`;
 
-                carouselRef.current.addEventListener('slide.bs.carousel', (e:any) => {
-                    if(e && e.to != 'undefined' && setActiveCard) {
+                carouselRef.current.addEventListener('slide.bs.carousel', (e: any) => {
+
+                    if (e && e.to != 'undefined' && setActiveCard) {
                         setActiveCard(e.to);
                     }
                 })
 
             }
         };
-        
+
 
 
         updateIndicatorsPosition();
@@ -49,13 +51,9 @@ const Carousel = ({setActiveCard} : {
 
         <div className="carousel-inner">
             {cards && Array.isArray(cards) && cards.map((card: Card, index: number) => {
-                if (index === 0) {
-                    return <div className="carousel-item active" data-bs-interval="10000" key = {'carousel-item-1'} data-testid = {"card-item-" + index}>
-                        <CreditCard card={card} />
-                    </div>
-                }
 
-                return <div className="carousel-item" data-bs-interval="10000" key = {'carousel-item-'+(index+1)} data-testid = {"card-item-" + index}>
+
+                return <div className={`carousel-item ${activeIndex === index ? 'active' : ''}`} data-bs-interval="10000" key={'carousel-item-' + (index + 1)} data-testid={"card-item-" + index}>
                     <CreditCard card={card} />
                 </div>
             })}
@@ -64,11 +62,10 @@ const Carousel = ({setActiveCard} : {
 
         <div className="carousel-indicators" ref={indicatorsRef} >
             {cards && Array.isArray(cards) && cards.map((card: Card, index: number) => {
-                if (index === 0) {
-                    return <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" key = {'carousel-indicator-'+(index+1)}></button>
-                }
 
-                return <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to={index} aria-label={"Slide " + (index + 1)} key = {'carousel-indicator-'+(index+1)}></button>
+                return <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to={index} className={`${activeIndex === index ? 'active' : ''}`} aria-current="true" aria-label="Slide 1" key={'carousel-indicator-' + (index + 1)}></button>
+
+
             })}
 
         </div>
