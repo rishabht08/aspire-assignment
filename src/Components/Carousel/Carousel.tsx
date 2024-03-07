@@ -63,7 +63,7 @@ const Carousel = ({ activeIndex, setActiveCard }: {
         <div className="carousel-indicators" ref={indicatorsRef} >
             {cards && Array.isArray(cards) && cards.map((card: Card, index: number) => {
 
-                return <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to={index} className={`${activeIndex === index ? 'active' : ''}`} aria-current="true" aria-label="Slide 1" key={'carousel-indicator-' + (index + 1)}></button>
+                return <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to={index} className={`${activeIndex === index ? 'active' : ''}`} aria-current="true" aria-label={"Slide " + (index+1)} key={'carousel-indicator-' + (index + 1)}></button>
 
 
             })}

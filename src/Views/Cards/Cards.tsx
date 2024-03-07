@@ -111,7 +111,7 @@ const Cards = (): React.JSX.Element => {
                             <div>
                                 <Carousel activeIndex={activeIndex} setActiveCard={(index: number) => setActiveIndex(index)} />
                             </div>
-                            {cardsList.length && <div className="action-item-wrapper">
+                            {cardsList.length > 0 && <div className="action-item-wrapper">
                                 <div className="item-container">
                                     <div className="action-item" onClick={handleFreezeCard}>
                                         <div className="item-icon">
@@ -257,8 +257,12 @@ const Cards = (): React.JSX.Element => {
                 }}>No</BsButton>
 
                 <BsButton variant="danger" onClick={() => {
+                    let isLast = activeIndex === cardsList.length-1;
                     dispatch(removeCard(activeIndex));
-                    setActiveIndex(activeIndex-1)
+                    if(isLast) {
+                        setActiveIndex(activeIndex-1)
+                    }
+                   
                     setLgcShow(false)
                 }}>Remove</BsButton>
             </Modal.Footer>
